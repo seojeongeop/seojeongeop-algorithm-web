@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서정업 알고리즘</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>서정업 알고리즘 진단기</h1>
+    <p>다음 버튼을 눌러 몸 상태를 확인해보세요.</p>
+    <button onclick="runAlgorithm()">진단 실행</button>
+    <div id="result"></div>
+
+    <div id="extra" style="margin-top: 30px; text-align: left; font-size: 15px;">
+      <hr />
+      <p>
+        『<strong>골반 때문이야</strong>』와 『<strong>열 때문이야</strong>』를 참고하시면<br />
+        몸의 원리를 쉽게 이해하실 수 있습니다. <br />
+        → <a href="https://search.shopping.naver.com/booksearch/book/detail?query=골반%20때
