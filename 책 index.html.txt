@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>서정업 알고리즘</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>서정업 알고리즘 진단기</h1>
+    <p>다음 버튼을 눌러 몸 상태를 확인해보세요.</p>
+    <button onclick="runAlgorithm()">진단 실행</button>
+    <div id="result"></div>
+
+    <div style="margin-top: 30px; text-align: left;">
+      <h3>관련 서적 보기</h3>
+      <ul>
+        <li>
+          <a href="https://search.shopping.naver.com/search/all?query=골반%20때문이야" target="_blank">
+            『골반 때문이야』 네이버 링크
+          </a>
+        </li>
+        <li>
+          <a href="https://search.shopping.naver.com/search/all?query=열 때문이야" target="_blank">
+            『열 때문이야』 네이버 링크
+          </a>
+        </li>
+        <li>
+          <a href="https://search.shopping.naver.com/search/all?query=천송헬스케어" target="_blank">
+            『천송헬스케어』 네이버 링크
+          </a>
+        </li>
+      </ul>
+
+      <p style="margin-top: 20px;">
+        『천송헬스케어』 책을 이해하시면 몸을 더 쉽게 이해하실 수 있습니다.<br/>
+        그것도 조금 어려우신 분들은 <strong>천송헬스케어</strong>로 직접 문의해주세요.<br/>
+        <strong>천송헬스케어 전화: <a href="tel:02-537-9866"></a></strong>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
