@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>서정업 키워드 감지기</title>
+</head>
+<body>
+  <h2>서정업 증상 체크</h2>
+  <textarea id="inputText" rows="5" cols="50" placeholder="증상을 입력해보세요..."></textarea><br>
+  <button onclick="checkSymptoms()">진단하기</button>
+  <pre id="result"></pre>
+
+  <script>
+    const keywords = {
+      heat: ["몸이 차가워요", "열이 없어요", "손발이 시려요", "소화가 안돼요", "잠이 안 와요", "몸이 뻣뻣해요", "기운이 없어요"],
+      pelvis: ["골반이 틀어졌어요", "거북목", "일자목", "어깨가 내려갔어요", "걸음걸이가 삐뚤어요", "목에 주름", "무릎이 아파요"]
+    };
+
+    function detectKeywords(text) {
+      const detected = { heat: [], pelvis: [] };
+      for (let category in keywords) {
+        keywords[category].forEach(phrase => {
+          if (text.includes(phrase)) {
+            detected[category].push(phrase);
+          }
+        });
+      }
+      return detected;
+    }
+
+    function generateResponse(input) {
+      const detected = detectKeywords(input);
+      let response = "";
+
+      if (detected.heat.length > 0) {
+        response += "[열 때문이야] 몸이 차가운 것으로 보입니다. 따뜻하게 해주는 습관이 필요해요.\n";
+      }
+
+      if (detected.pelvis.length > 0) {
+        response += "[골반 때문이야] 자세와 정렬의 문제가 감지됩니다. 골반을 정렬하는 운동을 추천드려요.\n";
+      }
+
+      if (response === "") {
+        response = "현재 입력된 증상에서 골반 또는 열 문제는 감지되지 않았습니다.";
+      }
+
+      return response;
+    }
+
+    function checkSymptoms() {
+      const input = document.getElementById("inputText").value;
+      const result = generateResponse(input);
+      document.getElementById("result").innerText = result;
+    }
+  </script>
+</body>
+</html>
